@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link href = "https://www.jqueryscript.net/css/jquerysctipttop.css"
+            rel = "stylesheet" type = "text/css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js">
+            <link rel = "stylesheet" href = "jQuery-plugin-progressbar.css">
+            <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="jQuery-plugin-progressbar.css">
+            <link rel="stylesheet" href="style.css">
+            <script src="progressbar.js" type="text/javascript" charset="utf-8" async defer></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src = "https://code.jquery.com/jquery-2.1.4.min.js"></script>
+            <script src = "jQuery-plugin-progressbar.js"></script>
+            <script src="jquery-circle-progress/dist/circle-progress.js"></script>
+            <script src="jQuery-plugin-progressbar/jQuery-plugin-progressbar.js"></script>
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script>
+            $( function() {
+            $( "#accordion" ).accordion();
+            } );
+            $(document).ready(function(){
+            $("#demo").on("hide.bs.collapse", function(){
+            $(".btn").html('<i class="fa fa-angle-down" aria-hidden="true"></i>');
+            });
+            $("#demo").on("show.bs.collapse", function(){
+            $(".btn").html('<i class="fa fa-angle-up" aria-hidden="true"></i>');
+            });
+            });
+            </script>
+        </head>
+        <body>
+            <div class="container">
+                
+                <h2>Expand and Collapse with different icons</h2>
+                <button type="button" class="btn btn-default " id="target" data-toggle="collapse" data-target="#demo">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </button>
+                <div id="demo" class="collapse">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="unit-1">
+                                <h3>Unit-1</h3>
+                                <div class="col-md-3">
+                                    
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                            <span class="sr-only">70% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                            aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                                            <span class="sr-only">30% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="unit-2">
+                            <h3>Unit-2</h3>
+                            <div class="col-md-3">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                                        <span class="sr-only">30% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="wrapper">
+                    <img src="http://static.iltalehti.fi/terveys/kippari_etu2250612PP_tr.jpg" />
+
+                    <div id="bar"></div>
+
+                </div>
+           
+            
+
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            Collapsible Group 1</a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            Collapsible Group 2</a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            Collapsible Group 3</a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-bar position" data-percent="60" data-duration="1000" data-color="#ccc,yellow"></div>
+                <input type="submit" value="reload">
+            </div>
+            <script>
+
+            var circle = new ProgressBar.Circle('#bar', {
+            strokeWidth: 4,  // This means 4% of the container
+            color: '#000'
+            
+            });
+            circle.animate(1);
+            $(".progress-bar").loading();
+            $('input').on('click', function () {
+            $(".progress-bar").loading();
+            });
+            </script>
+        </body>
+    </html>
