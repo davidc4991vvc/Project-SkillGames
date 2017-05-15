@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Flat Progress Bar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      .progress-pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+.progress-pie-chart.gt-50 {
+  background-color: #e6005c;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #e6005c;
+  transform: rotate(60deg);
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #E5E5E5;
+}
+
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 173.91304px/2);
+  top: calc(50% - 173.91304px/2);
+  width: 173.91304px;
+  height: 173.91304px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: black;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+body {
+  font-family: Arial;
+  background: #f7f7f7;
+}
+
+.progress-pie-chart {
+  margin: 50px auto 0;
+}
+
+    </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+  <div class="progress-pie-chart circle-1" data-percent="66">
+  <div class="ppc-progress">
+    <div class="ppc-progress-fill progress-1"></div>
+  </div>
+  <div class="ppc-percents">
+    <div class="pcc-percents-wrapper">
+      <span class="sp-1">%</span>
+    </div>
+  </div>
+</div>
+
+<div class="progress-pie-chart circle-2" data-percent="466">
+<div class="ppc-progress">
+  <div class="ppc-progress-fill progress-2"></div>
+</div>
+<div class="ppc-percents">
+  <div class="pcc-percents-wrapper">
+    <span class="sp-2">%</span>
+  </div>
+</div>
+</div>
+
+<div class="progress-pie-chart circle-3" data-percent="666">
+<div class="ppc-progress">
+  <div class="ppc-progress-fill progress-3"></div>
+</div>
+<div class="ppc-percents">
+  <div class="pcc-percents-wrapper">
+    <span class="sp-3">%</span>
+  </div>
+</div>
+</div>
+
+<div class="progress-pie-chart circle-4" data-percent="450">
+<div class="ppc-progress">
+  <div class="ppc-progress-fill progress-4"></div>
+</div>
+<div class="ppc-percents">
+  <div class="pcc-percents-wrapper">
+    <span class="sp-4">%</span>
+  </div>
+</div>
+</div>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
