@@ -1,0 +1,95 @@
+/**
+ * typefaces
+ * ----------------------- */
+@import url('//fonts.googleapis.com/css?family=Domine|Lato');
+
+/**
+ * basic reset
+ * ----------------------- */
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato;
+  background: rgb(10,160,230);
+;
+}
+
+/**
+ * progress bar container
+ * ----------------------- */
+.progress-bar-group {
+  background: rgb(253,253,253);
+  padding: 1em 4em 3em;
+  width: 40em;
+  margin: 4em auto;
+  border: 1px solid rgb(10,130,190);
+}
+
+.progress-bar-group-title {
+  font-family: 'Domine';
+  font-size: 1.8em;
+  letter-spacing: 0em;
+}
+
+/**
+ * progress bar
+ * ----------------------- */
+.progress-bar {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5em;
+}
+
+.progress-bar .progress-bar__header {
+  overflow: hidden;
+}
+.progress-bar__label {
+  display: block;
+  color: #222;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  float: left;
+}
+
+.progress-bar__data {
+  display: block;
+  float: right;
+}
+
+
+.progress-bar .progress-bar__bg,
+.progress-bar .progress-bar__fg {
+  display: block;
+  height: 1em;
+  border-radius: 0.3em;
+}
+
+.progress-bar .progress-bar__bg {
+  position: relative;
+  width: 100%;
+  background-color: #e0e0e0; 
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+}
+
+.progress-bar .progress-bar__fg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-bar--primary {
+  background-color: rgb(18, 176, 19);
+}
+
+.progress-bar--secondary {
+  background-color: rgb(233, 150, 0);
+}
+
+.progress-bar--tertiary {
+  background-color: rgb(227, 34, 0);
+}
