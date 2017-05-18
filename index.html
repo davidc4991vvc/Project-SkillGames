@@ -13,6 +13,15 @@
             <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="jQuery-plugin-progressbar.css">
             <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" type="text/css" href="dounout.css">
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/responsive/responsive.min.js"></script>
             <script src="progressbar.js" type="text/javascript" charset="utf-8" async defer></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
             <script src="file.js" type="text/javascript" charset="utf-8" async defer></script>
@@ -40,7 +49,155 @@
             });
             });
 
+var chart = AmCharts.makeChart("chartdiv", {
+  "type": "pie",
+  "labelsEnabled": "false",
+  "autoMargins": "false",
+  "marginTop": "0",
+  "marginBottom": "0",
+  "marginLeft": "0",
+  "marginRight": "0",
+  "pullOutRadius": "0",
+  "startDuration": "0",
+   "theme": "light",
+  "addClassNames": true,
+ "legend": {
+   
+    "position": "left",
+    "marginRight": 100,
+    "autoMargins": false,
+   
+  },
+  "innerRadius": "30%",
+  "defs": {
+    "filter": [{
+      "id": "shadow",
+      "width": "200%",
+      "height": "200%",
+      "feOffset": {
+        "result": "offOut",
+        "in": "SourceAlpha",
+        "dx": 0,
+        "dy": 0
+      },
+      "feGaussianBlur": {
+        "result": "blurOut",
+        "in": "offOut",
+        "stdDeviation": 5
+      },
+      "feBlend": {
+        "in": "SourceGraphic",
+        "in2": "blurOut",
+        "mode": "normal"
+      }
+    }]
+  },
+  "dataProvider": [{
+    "country": "Lithuania Lithuania",
+    "litres": 501.9
+  }, {
+    "country": "Czech Republic Czech Republic",
+    "litres": 301.9
+  }, {
+    "country": "Ireland",
+    "litres": 201.1
+  }, {
+    "country": "Germany",
+    "litres": 165.8
+  }, {
+    "country": "Australia",
+    "litres": 139.9
+  }, {
+    "country": "Austria",
+    "litres": 128.3
+  }, {
+    "country": "UK",
+    "litres": 99
+  }, {
+    "country": "Belgium",
+    "litres": 60
+  }, {
+    "country": "The Netherlands",
+    "litres": 50
+  },{
+    "country": "Lithuania",
+    "litres": 501.9
+  }, {
+    "country": "Czech Republic",
+    "litres": 301.9
+  }, {
+    "country": "Ireland",
+    "litres": 201.1
+  }, {
+    "country": "Germany",
+    "litres": 165.8
+  }, {
+    "country": "Australia",
+    "litres": 139.9
+  }, {
+    "country": "Austria",
+    "litres": 128.3
+  }, {
+    "country": "UK",
+    "litres": 99
+  }, {
+    "country": "Belgium",
+    "litres": 60
+  }, {
+    "country": "The Netherlands",
+    "litres": 50
+  },{
+    "country": "Lithuania",
+    "litres": 501.9
+  }, {
+    "country": "Czech Republic",
+    "litres": 301.9
+  }, {
+    "country": "Ireland",
+    "litres": 201.1
+  }, {
+    "country": "Germany",
+    "litres": 165.8
+  }, {
+    "country": "Australia",
+    "litres": 139.9
+  }, {
+    "country": "Austria",
+    "litres": 128.3
+  }, {
+    "country": "UK",
+    "litres": 99
+  }, {
+    "country": "Belgium",
+    "litres": 60
+  }, {
+    "country": "The Netherlands",
+    "litres": 50
+  }],
+  "valueField": "litres",
+  "titleField": "country",
+  "responsive": {
+    "enabled": true
+  },
+  "export": {
+    "enabled": true
+  }
+});
 
+chart.addListener("init", handleInit);
+
+chart.addListener("rollOverSlice", function(e) {
+  handleRollOver(e);
+});
+
+function handleInit(){
+  chart.legend.addListener("rollOverItem", handleRollOver);
+}
+
+function handleRollOver(e){
+  var wedge = e.dataItem.wedge.node;
+  wedge.parentNode.appendChild(wedge);
+}
 
         FusionCharts.ready(function(){
     var fusioncharts = new FusionCharts({
@@ -301,6 +458,10 @@
                     
                 </div>
 
+<div id="chartdiv" style=""></div>
+<div id="legenddiv" style=""></div>
+
+
 <ul>
     <li class="li-1"><span><font>Hello I am Lalit Kumar</font></span></li>
     <li class="li-2"><span>List item</span></li>
@@ -342,56 +503,10 @@
                 </div>
                 
 
-                <div class="wrapper">
-                    <img src="http://static.iltalehti.fi/terveys/kippari_etu2250612PP_tr.jpg" />
+               
 
-                    <div id="bar"></div>
-
-                </div>
-
-                <div id="doughnutChart" class="chart"></div>
            
-                <!-- Pie Chart -->
-                <main>
-  
-  <section>
-    <div class="pieID pie">
-      
-    </div>
-    <ul class="pieID legend">
-      <li>
-        <em>Humans</em>
-        <span>718</span>
-      </li>
-      <li>
-        <em>Dogs</em>
-        <span>531</span>
-      </li>
-      <li>
-        <em>Cats</em>
-        <span>868</span>
-      </li>
-      <li>
-        <em>Slugs</em>
-        <span>344</span>
-      </li>
-      <li>
-        <em>Aliens</em>
-        <span>1145</span>
-      </li>
-      <li>
-          <em>Lalit</em>
-          <span>500</span>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <p>Also, check out my <a href="http://codepen.io/ejsado/pen/HLgzK">Google Charts restyling</a>.</p>
-  </section>
-</main>
-<footer>
-  An original pen by <a href="http://codepen.io/ejsado/">Eric</a>.
-</footer>
+               
 
 
                 <div class="panel-group" id="accordion">

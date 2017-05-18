@@ -1,0 +1,45 @@
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  font-size: 11px;
+}
+
+.amcharts-pie-slice {
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition-duration: 0.3s;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  cursor: pointer;
+  box-shadow: 0 0 30px 0 #000;
+}
+
+.amcharts-pie-slice:hover {
+  transform: scale(1.1);
+  filter: url(#shadow);
+}             
+
+.amcharts-legend-div {
+  overflow-y: auto!important;
+  max-height: 300px;
+
+}         
+
+/*#chartwrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+#chartdiv {
+  position: relative;
+ 
+  width : 260px;
+  height : 360px;
+}     */
+
+
+
+
+
