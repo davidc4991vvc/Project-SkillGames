@@ -102,22 +102,33 @@
       "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
       "innerRadius": "30%",
       "legend": {
-        
+        "position": "left",
         "align": "center",
-        "markerType": "circle"
+        "markerType": "square"
       },
       "responsive": {
-        "enabled": true,
-        "addDefaultRules": true,
-        "rules": [
-          {
-            "minWidth": 500,
-            "overrides": {
-              "innerRadius": "50%",
-            }
-          }
-        ]
-      }
+    "enabled": true,
+    "addDefaultRules": true,
+    "rules": [{
+        "minWidth": 0,
+        "maxWidth": 537,
+        "overrides": {
+            "labelText": "[[value]]%",
+            "innerRadius": "40%",
+            "labelsEnabled": true
+        }
+    },{
+        "minWidth":0,
+        "maxWidth":800,
+        "overrides": {
+            "pullOutRadius": "5%",
+            "legend": {
+            "position": "bottom",
+            "enabled":false
+        }
+        }
+    }]
+},
     });
   </script>
 </head>
