@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Bar Fix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <section id="wrapper">
+  
+  <header>
+    <h1>Scrollbar Fixes </h1>
+    <h2>Sort Of...</h2>  
+  </header> 
+  
+ <div id="container">
+    <article id="container1"> <!--overflow: hidden-->
+    <article id="container2"> <!--overflow: auto-->
+       <div class="about">
+         <h2>No Scroll Bar</h2>
+         <p>Removes ugly scroll bar in Windows, but this means you get no scroll bar.</p>
+       </div>
+      <h1>No Scroll Bar</h1>
+      <img src="http://placehold.it/350x150">     
+      <h2>Headline</h2> 
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie neque a nunc malesuada, pretium dictum neque bibendum. Nullam nec aliquet magna. Quisque dictum eros lorem, a efficitur urna dictum eu. Nunc est libero, sollicitudin ac scelerisque vitae, vehicula ac mauris. Aenean tempus ante et enim laoreet, sed pretium ligula maximus. Nunc vestibulum purus vitae ipsum ullamcorper, ut condimentum felis lobortis. Nam tempor ut neque eget auctor. Fusce interdum nibh mi, id ornare tortor euismod non. In interdum fermentum nulla, vitae ultricies dolor ultrices at. Vestibulum ut ex sit amet libero ultrices laoreet. Donec aliquet consectetur urna sed viverra.<p>
+
+     <h2>Headline</h2>
+      
+     <p>Aenean tristique eget libero sed mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris faucibus elit sed nisl vestibulum vulputate. Sed ligula nulla, faucibus ut quam elementum, tempor gravida arcu. Mauris efficitur, purus vitae auctor bibendum, sapien enim commodo massa, non sollicitudin purus elit a purus. Sed vitae dapibus leo. Donec ut tortor a dolor accumsan porta.</p>
+      
+    <h2>Headline</h2>      
+
+    <p>Integer at vehicula ante, sed lobortis magna. Donec accumsan sit amet nunc non vestibulum. In varius neque at lectus tristique, ac congue eros dapibus. Praesent vulputate risus a molestie aliquet. Duis dignissim, libero sodales commodo elementum, eros elit faucibus massa, vel mattis diam nisl ac erat. Ut sagittis mi justo, eu hendrerit dolor faucibus ut. Aliquam mi ante, fringilla a imperdiet sed, dignissim ut lorem. Aenean malesuada, nibh eu consectetur imperdiet, nisl nisl luctus tortor, vel interdum nunc lorem a justo. Donec sodales eleifend neque a varius. Donec magna sem, condimentum ac convallis nec, dignissim eget nulla. Praesent pharetra et eros vitae placerat. Aenean sodales risus sit amet lacus maximus semper. Nam accumsan ut sem eu consectetur.</p></article></article>
+    </div>
+  
+  <div id="container" class="scrollBoxTwo">
+    <div class="about">
+      <h2>Custom Scrollbar</h2>
+      <p>Only available in webkit browsers. &nbsp : (</p>
+    </div>
+    <h1>Has Scroll Bar</h1>
+    <img src="http://placehold.it/350x150">     
+    <h2>Headline</h2> 
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut molestie neque a nunc malesuada, pretium dictum neque bibendum. Nullam nec aliquet magna. Quisque dictum eros lorem, a efficitur urna dictum eu. Nunc est libero, sollicitudin ac scelerisque vitae, vehicula ac mauris. Aenean tempus ante et enim laoreet, sed pretium ligula maximus. Nunc vestibulum purus vitae ipsum ullamcorper, ut condimentum felis lobortis. Nam tempor ut neque eget auctor. Fusce interdum nibh mi, id ornare tortor euismod non. In interdum fermentum nulla, vitae ultricies dolor ultrices at. Vestibulum ut ex sit amet libero ultrices laoreet. Donec aliquet consectetur urna sed viverra.<p>
+
+   <h2>Headline</h2>
+      
+   <p>Aenean tristique eget libero sed mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris faucibus elit sed nisl vestibulum vulputate. Sed ligula nulla, faucibus ut quam elementum, tempor gravida arcu. Mauris efficitur, purus vitae auctor bibendum, sapien enim commodo massa, non sollicitudin purus elit a purus. Sed vitae dapibus leo. Donec ut tortor a dolor accumsan porta.</p>
+      
+   <h2>Headline</h2>      
+
+   <p>Integer at vehicula ante, sed lobortis magna. Donec accumsan sit amet nunc non vestibulum. In varius neque at lectus tristique, ac congue eros dapibus. Praesent vulputate risus a molestie aliquet. Duis dignissim, libero sodales commodo elementum, eros elit faucibus massa, vel mattis diam nisl ac erat. Ut sagittis mi justo, eu hendrerit dolor faucibus ut. Aliquam mi ante, fringilla a imperdiet sed, dignissim ut lorem. Aenean malesuada, nibh eu consectetur imperdiet, nisl nisl luctus tortor, vel interdum nunc lorem a justo. Donec sodales eleifend neque a varius. Donec magna sem, condimentum ac convallis nec, dignissim eget nulla. Praesent pharetra et eros vitae placerat. Aenean sodales risus sit amet lacus maximus semper. Nam accumsan ut sem eu consectetur.</p>
+  </div>
+  
+  <article id="colophon">
+    <p>Came across an issue with the overflow auto scroll bar. It worked fine in most browsers, but on windows it not only looked ugly, but added unwanted space to the div (the container in question had a fixed width). A google search came up with little good alternatives other than the no scroll bar hack above, which can be confusing from a user experience standpoint. The content may be placed in a way though to inply more content further down. Customizing the scrollbar is another option but isn't supported in IE or Firefox.</p>
+  </article>
+  
+</section>
+  
+  
+</body>
+</html>
